@@ -1,0 +1,35 @@
+{
+    "name": "停車繳費查詢",
+    "short_name": "停車繳費",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#007AFF",
+    "theme_color": "#007AFF",
+    "description": "全台停車費查詢系統",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "app_icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "app_icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "app_icon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "app_icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
