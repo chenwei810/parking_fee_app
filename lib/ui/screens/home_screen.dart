@@ -266,7 +266,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
         // 結果列表標題
         Container(
-          padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
           decoration: const BoxDecoration(
             border: Border(
               bottom: BorderSide(
@@ -476,8 +476,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 ),
               ),
               const SizedBox(height: 4),
-              SizedBox(
-                height: 60,
+              Flexible(
                 child: SingleChildScrollView(
                   child: Wrap(
                     spacing: 4,

@@ -1,9 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';  // 添加這行
 import 'package:provider/provider.dart';
+import 'dart:io';
 import 'ui/screens/home_screen.dart';
 import 'ui/theme/app_theme.dart';
 import 'ui/theme/theme_provider.dart';
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback = (X509Certificate cert, String host, int port) {
+        final allowedHosts = [
+          'kpp.tbkc.gov.tw',                  // 高雄市
+        ];
+
+        final isAllowed = allowedHosts.any((allowedHost) => host.contains(allowedHost));
+
+        if (isAllowed) {
+          print('⚠️ SSL 憑證例外: $host:$port');
+          print('憑證主體: ${cert.subject}');
+          print('憑證簽發者: ${cert.issuer}');
+        }
+
+        return isAllowed;
+      };
+  }
+}
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();  // 添加這行

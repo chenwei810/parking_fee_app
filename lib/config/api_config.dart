@@ -14,7 +14,8 @@ class ApiConfig {
     ),
     "新北市": CityAPI(
       name: "新北市",
-      url: "https://trafficapi.traffic.ntpc.gov.tw/Parking/PayBill/CarID/{CarID}/CarType/{CarType}",
+      // url: "https://trafficapi.traffic.ntpc.gov.tw/Parking/PayBill/CarID/{CarID}/CarType/{CarType}",
+      url: "https://tt.guoyun.com.tw/TrafficPayBill/Parking/PayBill/CarID/{CarID}/CarType/{CarType}",
     ),
     "基隆市": CityAPI(
       name: "基隆市",
@@ -70,7 +71,8 @@ class ApiConfig {
     ),
     "高雄市": CityAPI(
       name: "高雄市",
-      url: "https://kpp.tbkc.gov.tw/TrafficPayBill/Parking/PayBill/CarID/{carid}/CarType/{cartype}",
+      // url: "https://kpp.tbkc.gov.tw/TrafficPayBill/Parking/PayBill/CarID/{carid}/CarType/{cartype}",
+      url: "https://kpp.tbkc.gov.tw/parking/V1/parking/PayBill/CarID/{CarID}/CarType/{CarType}",
     ),
     "屏東縣": CityAPI(
       name: "屏東縣",
